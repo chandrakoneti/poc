@@ -1,0 +1,10 @@
+<!DOCTYPE html!>
+<!--/* A simple sightly script */-->
+<html>
+ <head>
+   <title>${properties.jcr:title}</title>
+  </head>
+  <body>
+    <h1 data-sly-test="${properties.jcr:title}">${properties.jcr:title}</h1>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+package com.poc;
+
+import java.io.File;
+import java.io.IOException;
+
+public class GitPushPull {
+
+	public static void main(String[] args) throws IOException {
+
+		GitPushPull gitPushPull = new GitPushPull();
+		String str = "Chandra";
+		gitPushPull.pushRemote(str);
+	}
+
+	private void pushRemote(String str) throws IOException {
+		File localPath = File.createTempFile("GitRepo", "");
+		if (!localPath.delete()) {
+			throw new IOException("Could not delete repo "+ localPath);
+		}
+		String REMOTE_URL = "https://github.com/chandrakoneti/poc.git";
+		System.out.println("Cloning from "+ REMOTE_URL + " to " + localPath);
+	}
+
+}
